@@ -1,1 +1,2 @@
 Id_student;Surname;Name;Class;Status;
+1;Петров;Иван;7б;отличник;

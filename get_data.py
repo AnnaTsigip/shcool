@@ -11,13 +11,13 @@ def summa(a):
 
 
 def get_data():
-    with open('name.csv', 'r', encoding='utf-8') as name:
+    with open('name.txt', 'r',encoding='utf-8') as name:
         name = name.readlines()
 
-    with open('class.csv', 'r',encoding='utf-8') as classe:
+    with open('class.txt', 'r',encoding='utf-8') as classe:
         classe = classe.readlines()
 
-    with open('adress.csv', 'r',encoding='utf-8') as adress:
+    with open('adress.txt', 'r',encoding='utf-8') as adress:
         adress = adress.readlines()
     list = [summa(i)for i in zip(name, classe, adress)]
     return list
@@ -25,16 +25,16 @@ def get_data():
 
 def push_data(str):
     str = str.split(';')
-    with open('name.csv', 'a',encoding='utf-8') as name:
+    with open('name.csv', 'a') as name:
         for i in range(0, 5):
             name.write(str[i]+';')
         name.write('\n')
-    with open('class.csv', 'a',encoding='utf-8') as classe:
+    with open('class.csv', 'a') as classe:
         classe.write(str[0]+';')
         for i in range(5, 7):
             classe.write(str[i]+';')
         classe.write('\n')
-    with open('adress.csv', 'a',encoding='utf-8') as adress:
+    with open('adress.csv', 'a') as adress:
         adress.write(str[0]+';')
         for i in range(7, 12):
             adress.write(str[i]+';')
