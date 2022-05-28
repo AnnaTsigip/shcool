@@ -11,13 +11,13 @@ def summa(a):
 
 
 def get_data():
-    with open('name.txt', 'r',encoding='utf-8') as name:
+    with open('name.csv', 'r') as name:
         name = name.readlines()
 
-    with open('class.txt', 'r',encoding='utf-8') as classe:
+    with open('class.csv', 'r') as classe:
         classe = classe.readlines()
 
-    with open('adress.txt', 'r',encoding='utf-8') as adress:
+    with open('adress.csv', 'r') as adress:
         adress = adress.readlines()
     list = [summa(i)for i in zip(name, classe, adress)]
     return list
